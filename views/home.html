@@ -1,0 +1,28 @@
+<!-- 🏗 Structo the Builder -->
+<!-- Utwórz podstawową strukturę dokumentu HTML dla strony głównej. -->
+
+<!-- 🏗 Structo the Builder -->
+<!-- Ustaw tytuł strony na "Shop - Home" -->
+ 
+<!-- 🏗 Structo the Builder -->
+<!-- Główny nagłówek strony. -->
+
+<!-- 🏗 Structo the Builder -->
+<!-- Dodaj nawigację z linkami do różnych sekcji sklepu. -->
+
+const homeRouting = (method, response) => {
+    response.setHeader("Content-Type", "text/html");
+    response.write("<html>");
+    response.write("<head><title>Shop - Home</title></head>");
+    response.write("<body>");
+    response.write("<h1>Home</h1>");
+    response.write(
+      "<nav><a href='/product/add'>Add product</a><br /><a href='/product/new'>Newest product</a><br /><a href='/logout'>Logout</a></nav>"
+    );
+    response.write("</body>");
+    response.write("</html>");
+  
+    return response.end();
+  };
+  
+  module.exports = { homeRouting };
